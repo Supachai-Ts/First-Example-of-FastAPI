@@ -15,4 +15,5 @@ def read_item(item_id: int, q: Union[str, None] = None):
 @app.post("/items")
 async def create_item(request: Request):
     body = await request.json()
+    print(body["name"])
     return {"request body": body}
